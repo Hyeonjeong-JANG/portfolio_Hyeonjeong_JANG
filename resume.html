@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/resume.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- javascript 연결 -->
+  <script src="./js/resume.js" defer></script>
+  <script src="./js/modal.js" defer></script>
+  <script src="js/common.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <!-- 채널톡 -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="search" id="search" style="font-size: 17px;" onkeyup="filter()" placeholder="포트폴리오"
+          autocomplete="off" autofocus />
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <div class="search_result">
+        <div class="search_result_title"><a href="./resume.html#introduce" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">소개(Introduce)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술(Skill)</span>
+            <span class="list_detail">숙련도(Acheivement)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">연락처(Contact)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">주소(Address)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">전화번호(Phone)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">이메일(Email)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">깃헙(GitHub)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">언어(Language)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">라이브러리(Libraries)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">마크업(Markup)
+            </span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">도구(Tools)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">프로젝트(Project)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project01_ilkwang.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">일광전구</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project02_maison.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">메종키츠네</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">기획서(Report)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">아이디어 스케치(Idea Sketch)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">프로토타입(ProtoType)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">대학교(University)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">고등학교(High School)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">개발 관련 교육(Development Education)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html" id="home_btn">Home</a></li>
+        <li><a href="./resume.html" id="resume_btn"><img src="./images/favicon_color.png" alt="favicon_color"
+              style="width: 33px; height: 33px;">Resume</a></li>
+        <li><a href="./portfolio.html" id="portfolio_btn">Portfolio</a></li>
+        <li><a href="https://github.com/hyeonjeong0302" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme_btn"><a href="#!">
+          <img class="day" src="./images/day_mode.png" alt="">
+          <img class="night" src="./images/night_mode.png" alt="">
+        </a></div>
+    </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="wrap" id="resume">
+    <div class="resume_contact">
+      <div class="resume_contact_title">
+        <span>장현정</span><span class="bar"></span><span>Resume</span>
+      </div>
+      <!--resume_contact_title-->
+      <div class="resume_contact_detail">
+        <div class="resume_contact_image"><img src="./images/resume_image.png" alt=""></div>
+        <!--resume_contact_image-->
+        <div class="resume_contact_text">
+          <div class="text_contact">
+            <div>
+              <h3>연락처</h3> <img src="./images/favicon_color.png" alt="">
+            </div>
+            <p>이메일. <b><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hyeonjeong.jang.0302@gmail.com"
+                  target="_blank">hyeonjeong.jang.0302@gmail.com</a></b></p>
+            <p>전화번호. <b><a href="tel:010-2769-8932">010-2769-8932</a></b></p>
+          </div>
+          <!--text_contact-->
+          <div class="text_channel">
+            <div>
+              <h3>링크</h3> <img src="./images/favicon_color.png" alt="">
+            </div>
+            <p>GitHub. <b><a href="https://github.com/hyeonjeong0302"
+                  target="_blank">https://github.com/hyeonjeong0302</a></b></p>
+            <p>메종키츠네 Project. <b>
+
+                <a href="https://hyeonjeong0302.github.io/UI__Hyunjung_JANG/"
+                  target="_blank">https://hyeonjeong0302.github.io/UI__Hyunjung_JANG/</a></b></p>
+            <p>로그인 Project. <b>
+                <a href="https://hyeonjeong0302.github.io/Hyeonjeong_JANG_Login/"
+                  target="_blank">https://hyeonjeong0302.github.io/Hyeonjeong_JANG_Login/</a>
+              </b></p>
+            <p>일광전구 Project. <b>
+                <a href="https://hyeonjeong0302.github.io/team_project_/"
+                  target="_blank">https://hyeonjeong0302.github.io/team_project_/</a>
+              </b></p>
+          </div>
+          <!--text_channel-->
+        </div>
+        <!--resume_contact_text-->
+      </div>
+      <!--resume_contact_detail-->
+    </div>
+    <!--resume_contact-->
+
+    <div class="introduce" id="introduce">
+      <h1>소개</h1>
+      <p>새로 배우는 것을 좋아하며 집요하게 파고들어 내 것으로 만들고자 항상 노력하는 개발자 장현정입니다. <br /><br />
+        <b class="
+chinese" style="font-family: Noto Sans TC;">讀書百遍義自見(독서백편의자현)</b> <span>학문을 열심히 탐구하면 뜻한 바를 이룰 수 있다.</span>
+        <br />
+        중학교 시절 이후 매일 가슴에 품고 다닌 말입니다.<br /> 안 되면 되게 하라! 모두가 사람이 하는 일이다! 라는 다짐으로 모르면 100번을 읽어서라도 내 것으로 만들어 귀사의 발전에 도움이 되도록
+        노력하겠습니다.
+        <br /> <br />
+        개발 업무에 적합한 저의 강점은 다음과 같습니다.
+        <br />
+        <b>1. 타인의 의견에 개방적인 태도</b> 저는 누군가가 제 실수나 고칠 점을 말해주는 것이 불편하지 않습니다. 혼자만의 생각은 자칫 그른 방향으로 흐를 가능성이 있기 때문에 나중에 가서 크게
+        고치는 것보다는 지금 조금 방향을 트는 쪽이 더 현명한 선택을 할 가능성이 크다고 생각하기 때문입니다. 개발 업무를 하며 상사나 동료가 저에게 잘못된 점을 말해주었을 때 기꺼이 받아들일 준비가 되어
+        있습니다.
+        <br />
+        <b>2. 사색하고 반추하는 습관</b>저는 이해가 되지 않거나 개선되어야 할 부분이 있으면 계속해서 그것을 되짚어 봅니다. 예전에는 생각과 휴식을 분리시키지 못해 항상 긴장 상태에 있었기 때문에
+        잠자는 시간에도 스트레스를 받았던 적이 있었습니다. 하지만 명상을 통해 완전한 휴식 시간을 확보할 수 있게 되었고 일과시간에 더욱 집중할 수 있게 되었습니다. 저의 이런 사색하고 반추하는 습관이
+        앞으로의 개발 업무에 도움이 될 것이라 생각합니다. 개발자의 업무는 ‘1+1=2’와 같이 정해진 답이 있는 것이 아니라 생각하고 또 생각하여 더 나은 방향을 위해 나아가는 것이라
+        보기 때문입니다.
+        <br />
+        <b>3. 먼저 다가가는 직원</b>저는 친화력이 좋기에 누군가에게 먼저 다가가고 상대방이 말을 걸어오는 것에 대해 거부감이 없습니다. 하루 24시간 중 3분의 1 이상을 함께하는 동료와 사이가
+        서먹한 것만큼 고통스러운 것은 없다고 생각합니다. 또한,
+        협업해야 하는 개발 업무의 특성상 동료들과 좋은 관계를 유지해야 더 좋은 결과물이 나올 수 있다고 생각합니다. 좋은 결과물은 단순히 그 프로젝트 하나의 성패만을 좌우하는 것이 아닌, 나 스스로 업무에
+        대한 자신감을
+        키울 수 있게 하고, 더 나아가 회사 전체의 성장에도 도움이 될 수 있다고 생각합니다.
+        <br />
+        <b>4. 늘 공부하는 개발자</b>주변의 개발자들을 보았을 때 가장 매력적이라 느꼈던 것이 ‘퇴근 후 혹은 주말 스터디 모임’을 하는 부분이었습니다. 저는 평소에 독서를 하고 그것에 대한 감상을
+        나누는 것을 즐깁니다. 생각에는 정답이 없고 다양한
+        사고를 내 안에 저장하다 보면 그것들이 어느 순간 뭉쳐져서 커다란 힘이 될 것이라 믿기 때문입니다. 개발과 관련된 이슈 역시 이와 마찬가지로 서로의 생각을 나누고 서로 피드백 해주다 보면 어느 순간
+        성장해 있는
+        서로를 발견할 수 있을 거라고 봅니다. 귀사에 입사하여 나 혼자가 아니라 ‘함께 성장 성장하는 사람’이 되기 위해 노력하겠습니다.
+      </p>
+    </div>
+    <!--introduce-->
+    <div class="skills_ex">
+      <h1>기술 숙련도</h1>
+
+      <div class="skills_gage" id="skills">
+        <h3>언어(Language)</h3>
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_javascript.png" alt="">
+            <p>JavaScript</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress javascript_bar" data-percent="90"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>프로그래밍 문법 활용, 동적 웹페이지 구축, jQuery 활용</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <h3>마크업(MarkUp)</h3>
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_html5.png" alt="">
+            <p>HTML5</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress html_bar" data-percent="100"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>사용자 경험을 중시한 UI 구축, 시맨틱 마크업 활용</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_css3.png" alt="">
+            <p>CSS3</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress css_bar" data-percent="100"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>키프레임 이용한 반응형 웹 제작</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_scss.png" alt="">
+            <p>SASS(SCSS)</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress scss_bar" data-percent="90"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>SCSS(SASS) 문법 활용</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <h3>프레임워크 / 라이브러리(FrameWork / Library)</h3>
+        <div class="each_skill react">
+          <div class="skill_name"><img src="./images/icon_react.png" alt="">
+            <p>React</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress react_bar" data-percent="80"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>Component 이용한 페이지 구성, Router 이용한 SPA 구현, Redux 라이브러리 활용</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_nodejs.png" alt="">
+            <p>Node.js</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress node_js_bar" data-percent="75"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>Node.js를 통한 React, Parcel Bundler 등의 라이브러리,프레임워크 이용</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_parcel_bundler.png" alt="">
+            <p>Parcel Bundler</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress parcel_bundler_bar" data-percent="75"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>마크업 언어 컴파일</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <h3>도구(Tool)</h3>
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_git.png" alt="">
+            <p>Git / </p>
+            <img src="./images/icon_github.png" alt="">
+            <p>GitHub</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress git_bar" data-percent="90"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>버전 관리, 원격 작업</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+        <div class="each_skill">
+          <div class="skill_name"><img src="./images/icon_xd.png" alt="">
+            <p>XD / </p>
+            <img src="./images/icon_figma.png" alt="">
+            <p>Figma</p>
+          </div>
+          <div class="progress_bar">
+            <div class="progress xd_bar" data-percent="90"> </div>
+          </div>
+          <ul class="skill_text">
+            <li>그리드 활용한 레이아웃 설계, 프로토타입/시안 제작</li>
+          </ul>
+        </div>
+        <!--each_skill-->
+
+      </div>
+      <!--skills_gage-->
+      <!--skills_desc-->
+    </div>
+    <!--skills_ex-->
+
+    <div class="education_ex" id="education">
+      <div class="education_sort">
+        <h1>정규 교육</h1>
+        <div class="education">
+          <div class="each_education">
+            <span class="school">○○대학교</span>
+            <span class="span">2008.03 - 2018.02</span>
+            <span class="major">국어국문학 학사</span>
+          </div>
+          <!--university-->
+          <div class="each_education">
+            <span class="school">○○고등학교</span>
+            <span class="span">2005.03 - 2008.02</span>
+            <span class="major"></span>
+          </div>
+          <!--high_school-->
+        </div>
+        <!--education-->
+      </div>
+      <div class="education_sort">
+        <h1>개발 관련 교육</h1>
+        <div class="education">
+          <div class="each_education">
+            <span class="school">그린 컴퓨터 아카데미</span>
+            <span class="span">2022.12 - 2023.07</span>
+            <span class="major">[스마트웹&콘텐츠개발]<br />프론트엔드 개발자<br />(자바스크립트, React)양성과정</span>
+          </div>
+          <!--academy-->
+        </div>
+      </div>
+    </div>
+    <!--education_ex-->
+
+    <div class="quick">
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+
+</body>
+
+</html>

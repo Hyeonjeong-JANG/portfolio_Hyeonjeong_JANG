@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - 장현정 포트폴리오</title>
+
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/portfolio.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+
+  <!-- modal js 연결 -->
+  <script src="./js/modal.js" defer></script>
+  <script src="./js/common.js" defer></script>
+
+  <!-- Swiper 연결 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <!-- 채널톡 -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="search" id="search" style="font-size: 17px;" onkeyup="filter()" placeholder="포트폴리오"
+          autocomplete="off" autofocus />
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <div class="search_result">
+        <div class="search_result_title"><a href="./resume.html#introduce" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">소개(Introduce)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술(Skill)</span>
+            <span class="list_detail">숙련도(Acheivement)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">연락처(Contact)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">주소(Address)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">전화번호(Phone)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">이메일(Email)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">깃헙(GitHub)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">언어(Language)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">라이브러리(Libraries)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">마크업(Markup)
+            </span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">도구(Tools)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">프로젝트(Project)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project01_ilkwang.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">일광전구</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project02_maison.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">메종키츠네</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">기획서(Report)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">아이디어 스케치(Idea Sketch)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">프로토타입(ProtoType)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">대학교(University)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">고등학교(High School)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">개발 관련 교육(Development Education)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html" id="home_btn">Home</a></li>
+        <li><a href="./resume.html" id="resume_btn">Resume</a></li>
+        <li><a href="./portfolio.html" id="portfolio_btn"><img src="./images/favicon_color.png" alt="favicon_color"
+              style="width: 33px; height: 33px;">Portfolio</a></li>
+        <li><a href="https://github.com/hyeonjeong0302" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme_btn"><a href="#!">
+          <img class="day" src="./images/day_mode.png" alt="">
+          <img class="night" src="./images/night_mode.png" alt="">
+        </a></div>
+    </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="wrap">
+    <div class="portfolio_introduce">
+      <div class="portfolio_introduce_image"><img src="./images/portfolio_image.png" alt=""></div>
+      <!--portfolio_introduce_image-->
+      <div class="portfolio_introduce_title">
+        <span>장현정</span><span class="bar">.</span><span>Portfolio</span>
+      </div>
+    </div>
+    <!--portfolio_introduce-->
+
+    <div class="projects_wrap" id="project">
+      <h1>프로젝트</h1>
+      <div class="each_project">
+        <div class="project_left">
+          <a href="./project01_ilkwang.html" target="_blank">
+            <img src="./images/project01.png" alt="">
+          </a>
+          <!--project_image-->
+        </div>
+        <div class="project_right">
+          <div class="project_title">
+            <div>
+              <div class="sort">
+                <h2><a href="./project01_ilkwang.html" target="_blank">일광전구</a></h2>
+                <span>팀프로젝트</span>
+              </div>
+              <div class="link_btn">
+                <div class="code_btn"><a href="./project01_ilkwang.html" target="_blank">코드보기</a></div>
+                <div class="site_btn"><a href="https://hyeonjeong0302.github.io/team_project_/" target="_blank">일광전구</a>
+                </div>
+              </div>
+            </div>
+            <div class="project_desc"><img src="./images/favicon_color.png" alt="">
+              <p>일광전구 구매 사이트 리뉴얼 프로젝트</p>
+            </div>
+          </div>
+          <!--project_title-->
+          <!--link_btn-->
+          <div class="span">
+            <div>제작 기간</div>
+            <ul>
+              <li class="spent_span">2023/04/06 - 2023/05/02</li>
+            </ul>
+
+          </div>
+          <div class="team_composition">
+            <div>팀원 구성 및 담당 역할</div>
+            <ul>
+              <li>프론트엔드 6명</li>
+              <li class="my_role">기획서 작성, 아이디어 스케치/ 프로토타입 제작, 코딩(개인)</li>
+            </ul>
+          </div>
+          <!--team_composition-->
+          <div class="project_result">
+            <div>프로젝트 결과물<br />( 결과물을 보시려면 오른쪽<br /> <b
+                style="border: 3px solid #eee; border-radius: 5px; padding: 0 7px;">버튼</b>을 click해 주세요.)</div>
+            <ul>
+              <li><a href="./ik_report.html" target="_blank">기획서</a></li>
+              <li><a href="./ik_proto.html" target="_blank">프로토타입</a></li>
+              <li><a href="./ik_draft.html" target="_blank">시안</a></li>
+            </ul>
+          </div>
+          <!--project_result-->
+          <div class="used_skills">
+            <div>활용한 기술 스택</div>
+            <ul class="my_skills">
+              <li>
+                <div><img src="./images/icon_html5.png" alt="">HTML5</div>
+                <div><img src="./images/icon_javascript.png" alt="">JavaScript</div>
+                <div><img src="./images/icon_jquery.png" alt="">jQuery</div>
+                <div><img src="./images/icon_scss.png" alt="">SCSS</div>
+                <div class="scss"><img src="./images/icon_nodejs.png" alt="">Node.js</div>
+              </li>
+            </ul>
+          </div>
+          <!--used_skills-->
+        </div>
+      </div><!-- 일광전구 -->
+      <div class="each_project  login">
+        <div class="project_left">
+          <a href="./project03_login.html" target="_blank">
+            <img src="./images/project_03.png" alt="">
+          </a>
+          <!--project_image-->
+        </div>
+        <div class="project_right">
+          <div class="project_title">
+            <div>
+              <div class="sort">
+                <h2><a href="./project03_login.html" target="_blank">로그인/회원가입</a></h2>
+                <span>개인프로젝트</span>
+              </div>
+              <div class="link_btn">
+                <div class="code_btn"><a href="./project03_login.html" target="_blank">코드보기</a></div>
+                <div class="site_btn"><a href="https://hyeonjeong0302.github.io/Hyeonjeong_JANG_Login/" target="_blank">로그인</a>
+                </div>
+              </div>
+            </div>
+            <div class="project_desc"><img src="./images/favicon_color.png" alt="">
+              <p>로그인 시스템을 개발 프로젝트</p>
+            </div>
+          </div>
+          <!--project_title-->
+          <!--link_btn-->
+          <div class="span">
+            <div>제작 기간</div>
+            <ul>
+              <li class="spent_span">2023/04/15 - 2023/04/17</li>
+            </ul>
+
+          </div>
+          <div class="team_composition">
+            <div>팀원 구성 및 담당 역할</div>
+            <ul>
+              <li>프론트엔드 1명</li>
+              <li class="my_role">시안/플로우차트 제작, 코딩</li>
+            </ul>
+          </div>
+          <!--team_composition-->
+          <div class="project_result">
+            <div>프로젝트 결과물<br />( 결과물을 보시려면 오른쪽<br /> <b
+                style="border: 3px solid #eee; border-radius: 5px; padding: 0 7px;">버튼</b>을 click해 주세요.)</div>
+            <ul>
+              <li><a href="./login_draft.html" target="_blank">시안</a></li>
+              <li><a href="./login_flowchart.html" target="_blank">플로우차트</a></li>
+            </ul>
+          </div>
+          <!--project_result-->
+          <div class="used_skills">
+            <div>활용한 기술 스택</div>
+            <ul class="my_skills">
+              <li>
+                <div><img src="./images/icon_html5.png" alt="">HTML5</div>
+                <div><img src="./images/icon_css3.png" alt="">CSS3</div>
+                <div><img src="./images/icon_javascript.png" alt="">JavaScript</div>
+              </li>
+            </ul>
+          </div>
+          <!--used_skills-->
+        </div>
+      </div><!-- 로그인 -->
+
+      <div class="each_project">
+        <div class="project_left">
+          <a href="./project02_maison.html" target="_blank">
+            <img src="./images/project02.png" alt="">
+          </a>
+          <!--project_image-->
+        </div>
+        <div class="project_right">
+          <div class="project_title">
+            <div>
+              <div class="sort">
+                <h2><a href="./project02_maison.html" target="_blank">메종키츠네</a></h2>
+                <span>개인프로젝트</span>
+              </div>
+              <div class="link_btn">
+                <div class="code_btn"><a href="project02_maison.html" target="_blank">코드보기</a></div>
+                <div class="site_btn"><a href="https://hyeonjeong0302.github.io/UI__Hyunjung_JANG/"
+                    target="_blank">메종키츠네</a></div>
+              </div>
+            </div>
+            <div class="project_desc"><img src="./images/favicon_color.png" alt="">
+              <p>메종키츠네 구매 사이트 리뉴얼 및 이슈콘텐츠 개발 프로젝트</p>
+            </div>
+          </div>
+          <!--project_title-->
+          <!--link_btn-->
+          <div class="span">
+            <div>제작 기간</div>
+            <ul>
+              <li class="spent_span">2023/03/06 - 2023/03/13</li>
+            </ul>
+          </div>
+          <div class="team_composition">
+            <div>팀원 구성 및 담당 역할</div>
+            <ul>
+              <li>프론트엔드 1명</li>
+              <li class="my_role">기획서 작성, 아이디어 스케치/ 프로토타입/시안 제작, 코딩 </li>
+            </ul>
+          </div>
+          <!--team_composition-->
+          <div class="project_result">
+            <div>프로젝트 결과물<br />( 결과물을 보시려면 오른쪽<br /> <b
+                style="border: 3px solid #eee; border-radius: 5px; padding: 0 7px;">버튼</b>을 click해 주세요.)</div>
+            <ul>
+              <li><a href="./maison_report.html" target="_blank">기획서</a></li>
+              <li><a href="./maison_draft.html" target="_blank">시안</a></li>
+            </ul>
+          </div>
+          <!--project_result-->
+          <div class="used_skills">
+            <div>활용한 기술 스택</div>
+            <ul class="my_skills">
+              <li>
+                <div><img src="./images/icon_html5.png" alt="">HTML5</div>
+                <div><img src="./images/icon_css3.png" alt="">CSS3</div>
+                <div><img src="./images/icon_javascript.png" alt="">JavaScript</div>
+                <div><img src="./images/icon_jquery.png" alt="">jQuery</div>
+              </li>
+            </ul>
+          </div>
+          <!--used_skills-->
+        </div>
+
+      </div>
+      <!-- 메종키츠네 -->
+    </div>
+    <!--projects_wrap-->
+
+    <div class="quick">
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+
+</body>
+
+</html>

@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project01_ilkwang - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/project.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- modal js 연결 -->
+  <script src="./js/modal.js" defer></script>
+  <script src="./js/common.js" defer></script>
+  <script src="./js/project.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 채널톡 -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="search" id="search" style="font-size: 17px;" onkeyup="filter()" placeholder="포트폴리오"
+          autocomplete="off" autofocus />
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <!-- 여기까지1 -->
+      <div class="search_result">
+        <div class="search_result_title"><a href="./resume.html#introduce" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">소개(Introduce)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술(Skill)</span>
+            <span class="list_detail">숙련도(Acheivement)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">연락처(Contact)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">주소(Address)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">전화번호(Phone)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">이메일(Email)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">깃헙(GitHub)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">언어(Language)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">라이브러리(Libraries)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">마크업(Markup)
+            </span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">도구(Tools)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">프로젝트(Project)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project01_ilkwang.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">일광전구</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project02_maison.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">메종키츠네</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">기획서(Report)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">아이디어 스케치(Idea Sketch)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">프로토타입(ProtoType)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">대학교(University)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">고등학교(High School)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">개발 관련 교육(Development Education)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html" id="home_btn">Home</a></li>
+        <li><a href="./resume.html" id="resume_btn">Resume</a></li>
+        <li><a href="./portfolio.html" id="portfolio_btn"><img src="./images/favicon_color.png" alt="favicon_color"
+              style="width: 33px; height: 33px;">Portfolio</a></li>
+        <li><a href="https://github.com/hyeonjeong0302" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme_btn"><a href="#!">
+          <img class="day" src="./images/day_mode.png" alt="">
+          <img class="night" src="./images/night_mode.png" alt="">
+        </a></div>
+    </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="project_code_ex" id="codeReview">
+    <h1>일광전구 - Renewal Project</h1>
+    <div class="project_desc_short">
+      <img src="./images/favicon_color.png" alt="">
+      <p>일광전구 직영 쇼핑물의 레이아웃과 기능을 개선하여 사용성을 높인 프로젝트입니다.</p>
+    </div>
+    <!--project_desc_short-->
+    <h1>코드보기</h1>
+    <div class="code_btns">
+      <div class="active"><a href="#code1" class="code_btn">이슈콘텐츠</a></div>
+      <div><a href="#code2" class="code_btn">정렬</a></div>
+      <div><a href="#code3" class="code_btn">페이지네이션</a></div>
+      <div><a href="#code4" class="code_btn">컬러 탭</a></div>
+      <div><a href="#code5" class="code_btn">수량</a></div>
+      <div><a href="#code6" class="code_btn">아코디언</a></div>
+    </div>
+    <!--code_ex-->
+    <div class="code_ex">
+      <div class="code code_active" id="code1">
+        <div class="play_code">
+          <img src="./images/ik_issue.gif" alt="issue_content">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              const issueTabList = document.querySelectorAll(
+                ".issue_contents .issue_list li"
+              );
+              for (let i = 0; i < issueTabList.length; i++) {
+                issueTabList[i]
+                  .querySelector(".issue_btn")
+                  .addEventListener("mouseover", function (e) {
+                    e.preventDefault();
+                    for (let j = 0; j < issueTabList.length; j++) {
+                      issueTabList[j].classList.remove("is_on_issue");
+                    }
+                    this.parentNode.classList.add("is_on_issue");
+                  });
+              }
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%"><span
+                        style="color:#a71d5d">const</span>&nbsp;issueTabList&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#63a35c">".issue_contents&nbsp;.issue_list&nbsp;li"</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#0099cc">0</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span>&nbsp;issueTabList.<span
+                        style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issueTabList[i]</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.querySelector(<span
+                        style="color:#63a35c">".issue_btn"</span>)</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"mouseover"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;(e)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.preventDefault();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">let</span>&nbsp;j&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#0099cc">0</span>;&nbsp;j&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span>&nbsp;issueTabList.<span
+                        style="color:#066de2">length</span>;&nbsp;j<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issueTabList[j].classList.remove(<span
+                        style="color:#63a35c">"is_on_issue"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.parentNode.classList.add(<span
+                        style="color:#63a35c">"is_on_issue"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code2">
+        <div class="play_code">
+          <img src="./images/ik_sort.gif" alt="sort">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              function ProductSortUp(sortPageNumber) {
+                currentPage = 1;
+                while (bestSection.hasChildNodes()) {
+                  bestSection.removeChild(bestSection.firstChild);
+                }
+                shoppingList.sort(function (a, b) {
+                  return a.price - b.price;
+                });
+                // 페이지네이션
+                numberButtonWrapper.innerHTML = "";
+                for (let i = 1; i <= Math.ceil(shoppingList.length / 16); i++) {
+                  numberButtonWrapper.innerHTML += `<span class="number_button"> ${i} </span`;
+                }
+                numberButtonWrapper.firstChild.classList.add("selected");
+                pageNumberButtons = document.querySelectorAll(".number_button");
+          
+                pageNumberButtons.forEach((numberButton) => {
+                  numberButton.addEventListener("click", (e) => {
+                    currentPage = +e.target.innerHTML;
+                    console.log(currentPage);
+                    setPageOf(currentPage);
+                    moveSelectedPageHighlight();
+                  });
+                });
+          
+                for (
+                  let i = COUNT_PER_PAGE * (sortPageNumber - 1); i <= COUNT_PER_PAGE * (sortPageNumber - 1) + 15 && i <
+                  shoppingList.length; i++
+                ) {
+                  const bestDiv = document.createElement("div");
+                  const bestA = document.createElement("a");
+                  const bestImg = document.createElement("img");
+                  const bestName = document.createElement("p");
+                  const bestContent = document.createElement("div");
+                  const bestNameText = document.createTextNode(shoppingList[i].name);
+                  const bestPrice = document.createElement("p");
+                  const bestPriceText = document.createTextNode(shoppingList[i].price);
+                  const bestBox = document.createElement("p");
+                  const bestBoxText = document.createTextNode(shoppingList[i].best);
+          
+                  if (bestBoxText.data === "BEST") {
+                    bestBox.setAttribute("class", "best_box_text");
+                    bestA.appendChild(bestBox);
+                    bestBox.appendChild(bestBoxText);
+                  }
+                  
+                  bestName.setAttribute("class", "best_Name");
+                  bestPrice.setAttribute("class", "best_Price");
+                  bestDiv.setAttribute("class", "best_box");
+                  bestA.setAttribute("class", "best_link");
+                  bestA.setAttribute("href", "./detail.html");
+                  bestImg.setAttribute("src", shoppingList[i].src);
+                  bestContent.setAttribute("class", "best_txt");
+                  bestDiv.appendChild(bestA);
+                  bestSection.appendChild(bestDiv);
+                  bestA.appendChild(bestImg);
+                  bestName.appendChild(bestNameText);
+                  bestA.appendChild(bestName);
+                  bestPrice.appendChild(bestPriceText);
+                  bestA.appendChild(bestPrice);
+                  bestContent.appendChild(bestName);
+                  bestContent.appendChild(bestPrice);
+                  bestA.appendChild(bestContent);
+                }
+              }
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                    <div style="line-height:130%">15</div>
+                    <div style="line-height:130%">16</div>
+                    <div style="line-height:130%">17</div>
+                    <div style="line-height:130%">18</div>
+                    <div style="line-height:130%">19</div>
+                    <div style="line-height:130%">20</div>
+                    <div style="line-height:130%">21</div>
+                    <div style="line-height:130%">22</div>
+                    <div style="line-height:130%">23</div>
+                    <div style="line-height:130%">24</div>
+                    <div style="line-height:130%">25</div>
+                    <div style="line-height:130%">26</div>
+                    <div style="line-height:130%">27</div>
+                    <div style="line-height:130%">28</div>
+                    <div style="line-height:130%">29</div>
+                    <div style="line-height:130%">30</div>
+                    <div style="line-height:130%">31</div>
+                    <div style="line-height:130%">32</div>
+                    <div style="line-height:130%">33</div>
+                    <div style="line-height:130%">34</div>
+                    <div style="line-height:130%">35</div>
+                    <div style="line-height:130%">36</div>
+                    <div style="line-height:130%">37</div>
+                    <div style="line-height:130%">38</div>
+                    <div style="line-height:130%">39</div>
+                    <div style="line-height:130%">40</div>
+                    <div style="line-height:130%">41</div>
+                    <div style="line-height:130%">42</div>
+                    <div style="line-height:130%">43</div>
+                    <div style="line-height:130%">44</div>
+                    <div style="line-height:130%">45</div>
+                    <div style="line-height:130%">46</div>
+                    <div style="line-height:130%">47</div>
+                    <div style="line-height:130%">48</div>
+                    <div style="line-height:130%">49</div>
+                    <div style="line-height:130%">50</div>
+                    <div style="line-height:130%">51</div>
+                    <div style="line-height:130%">52</div>
+                    <div style="line-height:130%">53</div>
+                    <div style="line-height:130%">54</div>
+                    <div style="line-height:130%">55</div>
+                    <div style="line-height:130%">56</div>
+                    <div style="line-height:130%">57</div>
+                    <div style="line-height:130%">58</div>
+                    <div style="line-height:130%">59</div>
+                    <div style="line-height:130%">60</div>
+                    <div style="line-height:130%">61</div>
+                    <div style="line-height:130%">62</div>
+                    <div style="line-height:130%">63</div>
+                    <div style="line-height:130%">64</div>
+                    <div style="line-height:130%">65</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%"><span
+                        style="color:#a71d5d">function</span>&nbsp;ProductSortUp(sortPageNumber)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentPage&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">while</span>&nbsp;(bestSection.hasChildNodes())&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestSection.removeChild(bestSection.firstChild);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shoppingList.sort(<span
+                        style="color:#a71d5d">function</span>&nbsp;(a,&nbsp;b)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">return</span>&nbsp;a.price&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">-</span>&nbsp;b.price;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">//&nbsp;페이지네이션</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.innerHTML&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">""</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span
+                        style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span
+                        style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;Math.ceil(shoppingList.<span
+                        style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">/</span>&nbsp;<span style="color:#0099cc">16</span>);&nbsp;i<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.innerHTML&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;`<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>span&nbsp;<span
+                        style="color:#a71d5d">class</span><span style="color:#a71d5d">=</span><span
+                        style="color:#63a35c">"number_button"</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&gt;</span>&nbsp;${i}&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">/</span>span`;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.firstChild.classList.add(<span
+                        style="color:#63a35c">"selected"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pageNumberButtons&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(<span
+                        style="color:#63a35c">".number_button"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pageNumberButtons.forEach((numberButton)&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButton.<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;(e)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentPage&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>e.target.innerHTML;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">console</span>.log(currentPage);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setPageOf(currentPage);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveSelectedPageHighlight();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;COUNT_PER_PAGE&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">*</span>&nbsp;(sortPageNumber&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>&nbsp;<span
+                        style="color:#0099cc">1</span>);&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;COUNT_PER_PAGE&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">*</span>&nbsp;(sortPageNumber&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>&nbsp;<span
+                        style="color:#0099cc">1</span>)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#0099cc">15</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span>&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shoppingList.<span
+                        style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestDiv&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"div"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestA&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"a"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestImg&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"img"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestName&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestContent&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"div"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestNameText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].<span
+                        style="color:#066de2">name</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestPrice&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestPriceText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].price);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestBox&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestBoxText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].best);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">if</span>&nbsp;(bestBoxText.data&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"BEST"</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestBox.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_box_text"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestBox);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestBox.appendChild(bestBoxText);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestName.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_Name"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestPrice.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_Price"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestDiv.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_box"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_link"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.setAttribute(<span
+                        style="color:#63a35c">"href"</span>,&nbsp;<span style="color:#63a35c">"./detail.html"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestImg.setAttribute(<span
+                        style="color:#63a35c">"src"</span>,&nbsp;shoppingList[i].src);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_txt"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestDiv.appendChild(bestA);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestSection.appendChild(bestDiv);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestImg);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestName.appendChild(bestNameText);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestName);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestPrice.appendChild(bestPriceText);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestPrice);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.appendChild(bestName);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.appendChild(bestPrice);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestContent);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code3">
+        <div class="play_code">
+          <img src="./images/ik_pagination.gif" alt="pagination">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              const bestSection = document.querySelector(".best_product");
+              const sortSelect = document.querySelector(".sort_select");
+              let Newproducts = null;
+              const COUNT_PER_PAGE = 16;
+              let numberButtonWrapper = document.querySelector(".number_button_wrapper");
+              const section = document.querySelector("section");
+              const prevButton = document.querySelector(".prev_button");
+              const nextButton = document.querySelector(".next_button");
+              let pageNumberButtons;
+              let currentPage = 1;
+              let getTotalPageCount = () => {
+                return Math.ceil(shoppingList.length / COUNT_PER_PAGE);
+              };
+              let setPageButtons = () => {
+                numberButtonWrapper.innerHTML = "";
+                for (let i = 1; i <= getTotalPageCount(); i++) {
+                  numberButtonWrapper.innerHTML += `<span class="number_button"> ${i} </span`;
+                }
+                numberButtonWrapper.firstChild.classList.add("selected");
+                pageNumberButtons = document.querySelectorAll(".number_button");
+              };
+              let setPageOf = (pageNumber) => {
+                section.innerHTML = "";
+                for (
+                  let i = COUNT_PER_PAGE * (pageNumber - 1); i <= COUNT_PER_PAGE * (pageNumber - 1) + 15 && i < shoppingList
+                  .length; i++
+                ) {
+                  const bestDiv = document.createElement("div");
+                  const bestA = document.createElement("a");
+                  const bestImg = document.createElement("img");
+                  const bestName = document.createElement("p");
+                  const bestContent = document.createElement("div");
+                  const bestNameText = document.createTextNode(shoppingList[i].name);
+                  const bestPrice = document.createElement("p");
+                  let bestPriceText = document.createTextNode(shoppingList[i].price);
+                  const bestBox = document.createElement("p");
+                  const bestBoxText = document.createTextNode(shoppingList[i].best);
+                  if (bestBoxText.data === "BEST") {
+                    bestBox.setAttribute("class", "best_box_text");
+                    bestA.appendChild(bestBox);
+                    bestBox.appendChild(bestBoxText);
+                  }
+                  bestName.setAttribute("class", "best_Name");
+                  bestPrice.setAttribute("class", "best_Price");
+                  bestDiv.setAttribute("class", "best_box");
+                  bestA.setAttribute("class", "best_link");
+                  bestA.setAttribute("href", "./detail.html");
+                  bestImg.setAttribute("src", shoppingList[i].src);
+                  bestContent.setAttribute("class", "best_txt");
+                  bestDiv.appendChild(bestA);
+                  bestSection.appendChild(bestDiv);
+                  bestA.appendChild(bestImg);
+                  bestName.appendChild(bestNameText);
+                  bestA.appendChild(bestName);
+                  bestPrice.appendChild(bestPriceText);
+                  bestA.appendChild(bestPrice);
+                  bestContent.appendChild(bestName);
+                  bestContent.appendChild(bestPrice);
+                  bestA.appendChild(bestContent);
+                }
+              };
+              let moveSelectedPageHighlight = () => {
+                const pageNumberButtons = document.querySelectorAll(".number_button");
+                pageNumberButtons.forEach((numberButton) => {
+                  if (numberButton.classList.contains("selected")) {
+                    numberButton.classList.remove("selected");
+                  }
+                });
+                pageNumberButtons[currentPage - 1].classList.add("selected");
+              };
+              setPageButtons();
+              setPageOf(currentPage);
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                    <div style="line-height:130%">15</div>
+                    <div style="line-height:130%">16</div>
+                    <div style="line-height:130%">17</div>
+                    <div style="line-height:130%">18</div>
+                    <div style="line-height:130%">19</div>
+                    <div style="line-height:130%">20</div>
+                    <div style="line-height:130%">21</div>
+                    <div style="line-height:130%">22</div>
+                    <div style="line-height:130%">23</div>
+                    <div style="line-height:130%">24</div>
+                    <div style="line-height:130%">25</div>
+                    <div style="line-height:130%">26</div>
+                    <div style="line-height:130%">27</div>
+                    <div style="line-height:130%">28</div>
+                    <div style="line-height:130%">29</div>
+                    <div style="line-height:130%">30</div>
+                    <div style="line-height:130%">31</div>
+                    <div style="line-height:130%">32</div>
+                    <div style="line-height:130%">33</div>
+                    <div style="line-height:130%">34</div>
+                    <div style="line-height:130%">35</div>
+                    <div style="line-height:130%">36</div>
+                    <div style="line-height:130%">37</div>
+                    <div style="line-height:130%">38</div>
+                    <div style="line-height:130%">39</div>
+                    <div style="line-height:130%">40</div>
+                    <div style="line-height:130%">41</div>
+                    <div style="line-height:130%">42</div>
+                    <div style="line-height:130%">43</div>
+                    <div style="line-height:130%">44</div>
+                    <div style="line-height:130%">45</div>
+                    <div style="line-height:130%">46</div>
+                    <div style="line-height:130%">47</div>
+                    <div style="line-height:130%">48</div>
+                    <div style="line-height:130%">49</div>
+                    <div style="line-height:130%">50</div>
+                    <div style="line-height:130%">51</div>
+                    <div style="line-height:130%">52</div>
+                    <div style="line-height:130%">53</div>
+                    <div style="line-height:130%">54</div>
+                    <div style="line-height:130%">55</div>
+                    <div style="line-height:130%">56</div>
+                    <div style="line-height:130%">57</div>
+                    <div style="line-height:130%">58</div>
+                    <div style="line-height:130%">59</div>
+                    <div style="line-height:130%">60</div>
+                    <div style="line-height:130%">61</div>
+                    <div style="line-height:130%">62</div>
+                    <div style="line-height:130%">63</div>
+                    <div style="line-height:130%">64</div>
+                    <div style="line-height:130%">65</div>
+                    <div style="line-height:130%">66</div>
+                    <div style="line-height:130%">67</div>
+                    <div style="line-height:130%">68</div>
+                    <div style="line-height:130%">69</div>
+                    <div style="line-height:130%">70</div>
+                    <div style="line-height:130%">71</div>
+                    <div style="line-height:130%">72</div>
+                    <div style="line-height:130%">73</div>
+                    <div style="line-height:130%">74</div>
+                    <div style="line-height:130%">75</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%"><span
+                        style="color:#a71d5d">const</span>&nbsp;bestSection&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">".best_product"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;sortSelect&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">".sort_select"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;Newproducts&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">null</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;COUNT_PER_PAGE&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#0099cc">16</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;numberButtonWrapper&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">".number_button_wrapper"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;section&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">"section"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;prevButton&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">".prev_button"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;nextButton&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">".next_button"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;pageNumberButtons;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;currentPage&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;getTotalPageCount&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">return</span>&nbsp;Math.ceil(shoppingList.<span
+                        style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">/</span>&nbsp;COUNT_PER_PAGE);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;setPageButtons&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.innerHTML&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">""</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span
+                        style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span
+                        style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;getTotalPageCount();&nbsp;i<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.innerHTML&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;`<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>span&nbsp;<span
+                        style="color:#a71d5d">class</span><span style="color:#a71d5d">=</span><span
+                        style="color:#63a35c">"number_button"</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&gt;</span>&nbsp;${i}&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">/</span>span`;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButtonWrapper.firstChild.classList.add(<span
+                        style="color:#63a35c">"selected"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pageNumberButtons&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(<span
+                        style="color:#63a35c">".number_button"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;setPageOf&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;(pageNumber)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section.innerHTML&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">""</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;COUNT_PER_PAGE&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">*</span>&nbsp;(pageNumber&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">-</span>&nbsp;<span style="color:#0099cc">1</span>);&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;COUNT_PER_PAGE&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">*</span>&nbsp;(pageNumber&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>&nbsp;<span
+                        style="color:#0099cc">1</span>)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#0099cc">15</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span>&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;shoppingList</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span
+                        style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestDiv&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"div"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestA&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"a"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestImg&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"img"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestName&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestContent&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"div"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestNameText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].<span
+                        style="color:#066de2">name</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestPrice&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;bestPriceText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].price);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestBox&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"p"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;bestBoxText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.createTextNode(shoppingList[i].best);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">if</span>&nbsp;(bestBoxText.data&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"BEST"</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestBox.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_box_text"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestBox);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestBox.appendChild(bestBoxText);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestName.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_Name"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestPrice.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_Price"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestDiv.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_box"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_link"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.setAttribute(<span
+                        style="color:#63a35c">"href"</span>,&nbsp;<span style="color:#63a35c">"./detail.html"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestImg.setAttribute(<span
+                        style="color:#63a35c">"src"</span>,&nbsp;shoppingList[i].src);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.setAttribute(<span
+                        style="color:#63a35c">"class"</span>,&nbsp;<span style="color:#63a35c">"best_txt"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestDiv.appendChild(bestA);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestSection.appendChild(bestDiv);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestImg);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestName.appendChild(bestNameText);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestName);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestPrice.appendChild(bestPriceText);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestPrice);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.appendChild(bestName);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestContent.appendChild(bestPrice);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bestA.appendChild(bestContent);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;moveSelectedPageHighlight&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;pageNumberButtons&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(<span
+                        style="color:#63a35c">".number_button"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pageNumberButtons.forEach((numberButton)&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">if</span>&nbsp;(numberButton.classList.contains(<span
+                        style="color:#63a35c">"selected"</span>))&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberButton.classList.remove(<span
+                        style="color:#63a35c">"selected"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pageNumberButtons[currentPage&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>&nbsp;<span
+                        style="color:#0099cc">1</span>].classList.add(<span style="color:#63a35c">"selected"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;setPageButtons();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;setPageOf(currentPage);</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code4">
+        <div class="play_code">
+          <img src="./images/ik_color.gif" alt="">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              const colorTabList = document.querySelectorAll(
+      ".product_color .tab_menu .list li"
+    );
+    const contents = document.querySelectorAll(".left_top .cont_area .cont");
+    let activeCont = "";
+
+    for (let i = 0; i < colorTabList.length; i++) {
+      colorTabList[i].querySelector(".btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        for (let j = 0; j < colorTabList.length; j++) {
+          colorTabList[j].classList.remove("is_on");
+          contents[j].style.display = "none";
+        }
+        this.parentNode.classList.add("is_on");
+        activeCont = this.getAttribute("href");
+        document.querySelector(activeCont).style.display = "block";
+      });
+    }
+
+    document.getElementById("colorTab1").addEventListener("click", function () {
+      document.getElementById("colorText").innerText = "BUTTER";
+    });
+    document.getElementById("colorTab2").addEventListener("click", function () {
+      document.getElementById("colorText").innerText = "PEACH";
+    });
+    document.getElementById("colorTab3").addEventListener("click", function () {
+      document.getElementById("colorText").innerText = "WHITE";
+    });
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                    <div style="line-height:130%">15</div>
+                    <div style="line-height:130%">16</div>
+                    <div style="line-height:130%">17</div>
+                    <div style="line-height:130%">18</div>
+                    <div style="line-height:130%">19</div>
+                    <div style="line-height:130%">20</div>
+                    <div style="line-height:130%">21</div>
+                    <div style="line-height:130%">22</div>
+                    <div style="line-height:130%">23</div>
+                    <div style="line-height:130%">24</div>
+                    <div style="line-height:130%">25</div>
+                    <div style="line-height:130%">26</div>
+                    <div style="line-height:130%">27</div>
+                    <div style="line-height:130%">28</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%"><span
+                        style="color:#a71d5d">const</span>&nbsp;colorTabList&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#63a35c">".product_color&nbsp;.tab_menu&nbsp;.list&nbsp;li"</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">const</span>&nbsp;contents&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(<span
+                        style="color:#63a35c">".left_top&nbsp;.cont_area&nbsp;.cont"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;activeCont&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#0099cc">0</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span>&nbsp;colorTabList.<span
+                        style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colorTabList[i].querySelector(<span
+                        style="color:#63a35c">".btn"</span>).<span style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;(e)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.preventDefault();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span
+                        style="color:#a71d5d">let</span>&nbsp;j&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>;&nbsp;j&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;colorTabList.<span
+                        style="color:#066de2">length</span>;&nbsp;j<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colorTabList[j].classList.remove(<span
+                        style="color:#63a35c">"is_on"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contents[j].style.display&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"none"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.parentNode.classList.add(<span
+                        style="color:#63a35c">"is_on"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;activeCont&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">this</span>.getAttribute(<span style="color:#63a35c">"href"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(activeCont).style.display&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"block"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorTab1"</span>).<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span
+                        style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorText"</span>).innerText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"BUTTER"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorTab2"</span>).<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span
+                        style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorText"</span>).innerText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"PEACH"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorTab3"</span>).<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span
+                        style="color:#066de2">getElementById</span>(<span
+                        style="color:#63a35c">"colorText"</span>).innerText&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#63a35c">"WHITE"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code5">
+        <div class="play_code">
+          <img src="./images/ik_count.gif" alt="">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              let basket = {
+                totalCount: 0,
+                totalPrice: 0,
+          
+                reCalc: function () {
+                  this.totalCount = 0;
+                  this.totalPrice = 0;
+                  document.querySelectorAll(".p_num").forEach(function (item) {
+                    if (
+                      item.parentElement.parentElement.parentElement.previousElementSibling
+                      .firstElementChild.firstElementChild.checked == true
+                    ) {
+                      let count = parseInt(item.getAttribute("value"));
+                      this.totalCount += count;
+                      let price =
+                        item.parentElement.parentElement.previousElementSibling.firstElementChild.getAttribute(
+                          "value"
+                        );
+                      this.totalPrice += count * price;
+                    }
+                  }, this);
+                },
+          
+                updateUI: function () {
+                  document.querySelector("#sum_p_num").textContent =
+                    "(" + this.totalCount.formatNumber() + "개" + ")";
+                  document.querySelector("#sum_p_price").textContent =
+                    this.totalPrice.formatNumber() + "원";
+                },
+          
+                changePNum: function (pos) {
+                  let item = document.querySelector("input[name=p_num" + pos + "]");
+                  let p_num = parseInt(item.getAttribute("value"));
+                  let newval = event.target.classList.contains("up") ?
+                    p_num + 1 :
+                    event.target.classList.contains("down") ?
+                    p_num - 1 :
+                    event.target.value;
+                  if (parseInt(newval) < 1 || parseInt(newval) > 99) {
+                    return false;
+                  }
+                  item.setAttribute("value", newval);
+                  item.value = newval;
+                  let price =
+                    item.parentElement.parentElement.previousElementSibling.firstElementChild.getAttribute(
+                      "value"
+                    );
+                  item.parentElement.parentElement.nextElementSibling.textContent =
+                    (newval * price).formatNumber() + "원";
+                  this.reCalc();
+                  this.updateUI();
+                },
+          
+                checkItem: function () {
+                  this.reCalc();
+                  this.updateUI();
+                },
+          
+                delItem: function () {
+                  event.target.parentElement.parentElement.parentElement.remove();
+                  this.reCalc();
+                  this.updateUI();
+                },
+              };
+          
+              Number.prototype.formatNumber = function () {
+                if (this == 0) return 0;
+                let regex = /(^[+-]?\d+)(\d{3})/;
+                let nstr = this + "";
+                while (regex.test(nstr)) nstr = nstr.replace(regex, "$1" + "," + "$2");
+                return nstr;
+              };
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                    <div style="line-height:130%">15</div>
+                    <div style="line-height:130%">16</div>
+                    <div style="line-height:130%">17</div>
+                    <div style="line-height:130%">18</div>
+                    <div style="line-height:130%">19</div>
+                    <div style="line-height:130%">20</div>
+                    <div style="line-height:130%">21</div>
+                    <div style="line-height:130%">22</div>
+                    <div style="line-height:130%">23</div>
+                    <div style="line-height:130%">24</div>
+                    <div style="line-height:130%">25</div>
+                    <div style="line-height:130%">26</div>
+                    <div style="line-height:130%">27</div>
+                    <div style="line-height:130%">28</div>
+                    <div style="line-height:130%">29</div>
+                    <div style="line-height:130%">30</div>
+                    <div style="line-height:130%">31</div>
+                    <div style="line-height:130%">32</div>
+                    <div style="line-height:130%">33</div>
+                    <div style="line-height:130%">34</div>
+                    <div style="line-height:130%">35</div>
+                    <div style="line-height:130%">36</div>
+                    <div style="line-height:130%">37</div>
+                    <div style="line-height:130%">38</div>
+                    <div style="line-height:130%">39</div>
+                    <div style="line-height:130%">40</div>
+                    <div style="line-height:130%">41</div>
+                    <div style="line-height:130%">42</div>
+                    <div style="line-height:130%">43</div>
+                    <div style="line-height:130%">44</div>
+                    <div style="line-height:130%">45</div>
+                    <div style="line-height:130%">46</div>
+                    <div style="line-height:130%">47</div>
+                    <div style="line-height:130%">48</div>
+                    <div style="line-height:130%">49</div>
+                    <div style="line-height:130%">50</div>
+                    <div style="line-height:130%">51</div>
+                    <div style="line-height:130%">52</div>
+                    <div style="line-height:130%">53</div>
+                    <div style="line-height:130%">54</div>
+                    <div style="line-height:130%">55</div>
+                    <div style="line-height:130%">56</div>
+                    <div style="line-height:130%">57</div>
+                    <div style="line-height:130%">58</div>
+                    <div style="line-height:130%">59</div>
+                    <div style="line-height:130%">60</div>
+                    <div style="line-height:130%">61</div>
+                    <div style="line-height:130%">62</div>
+                    <div style="line-height:130%">63</div>
+                    <div style="line-height:130%">64</div>
+                    <div style="line-height:130%">65</div>
+                    <div style="line-height:130%">66</div>
+                    <div style="line-height:130%">67</div>
+                    <div style="line-height:130%">68</div>
+                    <div style="line-height:130%">69</div>
+                    <div style="line-height:130%">70</div>
+                    <div style="line-height:130%">71</div>
+                    <div style="line-height:130%">72</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;basket&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalCount:&nbsp;<span style="color:#0099cc">0</span>,</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalPrice:&nbsp;<span style="color:#0099cc">0</span>,</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reCalc:&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.totalCount&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.totalPrice&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.querySelectorAll(<span
+                        style="color:#63a35c">".p_num"</span>).forEach(<span
+                        style="color:#a71d5d">function</span>&nbsp;(item)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">if</span>&nbsp;(</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.parentElement.parentElement.parentElement.previousElementSibling
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.firstElementChild.firstElementChild.checked&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#a71d5d">true</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;count&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">parseInt</span>(item.getAttribute(<span
+                        style="color:#63a35c">"value"</span>));</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.totalCount&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;count;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;price&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.parentElement.parentElement.previousElementSibling.firstElementChild.getAttribute(
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#63a35c">"value"</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.totalPrice&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;count&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">*</span>&nbsp;price;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;<span style="color:#066de2">this</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateUI:&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">"#sum_p_num"</span>).textContent&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#63a35c">"("</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#066de2">this</span>.totalCount.formatNumber()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#63a35c">"개"</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">")"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">"#sum_p_price"</span>).textContent&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.totalPrice.formatNumber()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#63a35c">"원"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changePNum:&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;(pos)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;item&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">document</span>.querySelector(<span
+                        style="color:#63a35c">"input[name=p_num"</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;pos&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">"]"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;p_num&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">parseInt</span>(item.getAttribute(<span
+                        style="color:#63a35c">"value"</span>));</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;newval&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">event</span>.target.classList.contains(<span
+                        style="color:#63a35c">"up"</span>)&nbsp;?</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_num&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#0099cc">1</span>&nbsp;:</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">event</span>.target.classList.contains(<span
+                        style="color:#63a35c">"down"</span>)&nbsp;?</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_num&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>&nbsp;<span
+                        style="color:#0099cc">1</span>&nbsp;:</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">event</span>.target.value;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span
+                        style="color:#066de2">parseInt</span>(newval)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&lt;</span>&nbsp;<span style="color:#0099cc">1</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">|</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">|</span>&nbsp;<span
+                        style="color:#066de2">parseInt</span>(newval)&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">&gt;</span>&nbsp;<span style="color:#0099cc">99</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.setAttribute(<span
+                        style="color:#63a35c">"value"</span>,&nbsp;newval);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.value&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;newval;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;price&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.parentElement.parentElement.previousElementSibling.firstElementChild.getAttribute(
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#63a35c">"value"</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.parentElement.parentElement.nextElementSibling.textContent&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span></div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(newval&nbsp;<span
+                        style="color:#ff3399"></span><span
+                        style="color:#a71d5d">*</span>&nbsp;price).formatNumber()&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#63a35c">"원"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.reCalc();
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.updateUI();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkItem:&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.reCalc();
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.updateUI();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delItem:&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">event</span>.target.parentElement.parentElement.parentElement.remove();
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.reCalc();
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.updateUI();</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">Number</span>.<span
+                        style="color:#066de2">prototype</span>.formatNumber&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span
+                        style="color:#066de2">this</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>)&nbsp;<span
+                        style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">0</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;regex&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">/</span>(^[<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]?\d<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)(\d{<span
+                        style="color:#0099cc">3</span>})<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">/</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;nstr&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">this</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">""</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">while</span>&nbsp;(regex.test(nstr))&nbsp;nstr&nbsp;<span
+                        style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;nstr.replace(regex,&nbsp;<span
+                        style="color:#63a35c">"$1"</span>&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">","</span>&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#63a35c">"$2"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;nstr;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;};</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code6">
+        <div class="play_code">
+          <img src="./images/ik_accordion.gif" alt="">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              let acc = document.getElementsByClassName("accordion");
+              let i;
+          
+              for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                  this.classList.toggle("active");
+                  let panel = this.nextElementSibling;
+                  if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                  } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                  }
+                });
+              }
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+          <div class="colorscripter-code"
+            style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto">
+            <table class="colorscripter-code-table"
+              style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td style="padding:6px;border-right:2px solid #e5e5e5">
+                  <div
+                    style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="line-height:130%">1</div>
+                    <div style="line-height:130%">2</div>
+                    <div style="line-height:130%">3</div>
+                    <div style="line-height:130%">4</div>
+                    <div style="line-height:130%">5</div>
+                    <div style="line-height:130%">6</div>
+                    <div style="line-height:130%">7</div>
+                    <div style="line-height:130%">8</div>
+                    <div style="line-height:130%">9</div>
+                    <div style="line-height:130%">10</div>
+                    <div style="line-height:130%">11</div>
+                    <div style="line-height:130%">12</div>
+                    <div style="line-height:130%">13</div>
+                    <div style="line-height:130%">14</div>
+                  </div>
+                </td>
+                <td style="padding:6px 0;text-align:left">
+                  <div
+                    style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%">
+                    <div style="padding:0 6px; white-space:pre; line-height:130%"><span
+                        style="color:#a71d5d">let</span>&nbsp;acc&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span
+                        style="color:#066de2">getElementsByClassName</span>(<span
+                        style="color:#63a35c">"accordion"</span>);</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;i;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">for</span>&nbsp;(i&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>;&nbsp;i&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;acc.<span
+                        style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">+</span>)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acc[i].<span
+                        style="color:#066de2">addEventListener</span>(<span
+                        style="color:#63a35c">"click"</span>,&nbsp;<span
+                        style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#066de2">this</span>.classList.toggle(<span style="color:#63a35c">"active"</span>);
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">let</span>&nbsp;panel&nbsp;<span style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">this</span>.nextElementSibling;
+                    </div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                        style="color:#a71d5d">if</span>&nbsp;(panel.style.maxHeight)&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel.style.maxHeight&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span
+                        style="color:#066de2">null</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span
+                        style="color:#a71d5d">else</span>&nbsp;{</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel.style.maxHeight&nbsp;<span
+                        style="color:#ff3399"></span><span
+                        style="color:#a71d5d">=</span>&nbsp;panel.scrollHeight&nbsp;<span
+                        style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span
+                        style="color:#63a35c">"px"</span>;</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div>
+                    <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+                  </div>
+                  <div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a
+                      href="http://colorscripter.com/info#e" target="_blank"
+                      style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div>
+                </td>
+                <td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e"
+                    target="_blank" style="text-decoration:none;color:white"><span
+                      style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+    </div>
+  </div>
+  <!--project_code_ex-->
+  <div class="wrap">
+    <div class="project_screen_shot">
+      <h1>프로젝트 주요 화면</h1>
+      <img src="./images/screen_shot01.png" alt="">
+      <img src="./images/screen_shot02.png" alt="">
+      <img src="./images/screen_shot03.png" alt="">
+      <img src="./images/screen_shot04.png" alt="">
+      <img src="./images/screen_shot05.png" alt="">
+      <img src="./images/screen_shot06.png" alt="">
+
+    </div>
+    <!--project_screen_shot-->
+
+    <div class="planning_background">
+      <h1>프로젝트 기획 배경</h1>
+      <p>과거에 비해 집에 있는 시간이 늘어나면서 집을 나만의 '힐링 공간'으로 꾸미고자 하는 문화가 자리잡았다. <br />
+        '조명'은 공간을 크게 차지하지 않으면서도 집안 전체의 분위기를 확 바뀌게 하는 인테리어 소품으로 각광받고 있다. <br />
+        최근 전구 생선 전문 회사였던 일광전구가 '조명 기구 생산'으로 사업 영역 확대를 하였지만 홈페이지의 디자인이 경쟁 업체에 비해 트렌디하지 못하고 사용성이 떨어져서 중계 업체를 통해서 구입해야만 하는
+        번거로움이 있다.
+      </p>
+    </div>
+    <!--planning_background-->
+
+    <div class="project_detail">
+      <h1>프로젝트 상세 소개</h1>
+      <div><img src="./images/favicon_color.png" alt="">
+        <h3>리뉴얼 콘셉트 및 기대 효과</h3>
+      </div>
+      <ul class="concept_benefit">
+        <li>12column grid를 활용한 레이아웃 - 시각적 편안함 제공</li>
+        <li>직관성이 높은 카테고리 분류 - 구매 가이드라인 제시</li>
+        <li>편의 기능의 적재적소 배치 - 사용성 향상</li>
+      </ul>
+      <!--concept_benefit-->
+
+      <div><img src="./images/favicon_color.png" alt="">
+        <h3>타겟 유저</h3>
+      </div>
+      <ul class="target_user">
+        <li>일터이자 안식처를 나만의 취향으로 채워가는
+          20~30대 재택 근무자
+          (+ 재택 근무를 겸하는 직장인)</li>
+        <li>창업을 시작하며 가게 공간을 꾸미게 된 신규
+          창업자 및 소상공인</li>
+      </ul>
+      <!--target_user-->
+    </div>
+    <!--project_detail-->
+
+    <div class="result">
+      <h1>프로젝트 결과물</h1>
+      <ul>
+        <li><a href="./ik_report.html" target="_blank">기획서</a></li>
+        <li><a href="https://hyeonjeong0302.github.io/team_project_/" target="_blank">일광전구 사이트</a></li>
+      </ul>
+    </div>
+    <!--result-->
+
+    <div class="dev_span">
+      <h1>개발 기간 & 일정</h1>
+      <ul>
+        <li class="span">2023/04/06 - 2023/05/02</li>
+        <li>1주차: 아이템 선정, 세부 기획, 아이디어스케치/프로토타입/시안 제작</li>
+        <li>2주차: UI/UX 설계, UI/UX 수정</li>
+        <li>3주차: 개별 코딩</li>
+      </ul>
+    </div>
+    <!--dev_span-->
+
+    <div class="quick">
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+</body>
+
+</html>

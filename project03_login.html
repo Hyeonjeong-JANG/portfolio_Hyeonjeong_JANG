@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project03_로그인 - 장현정 포트폴리오</title>
+  <!-- scss 연결-->
+  <link rel="stylesheet" href="./scss/project.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_color.png" type="image/x-icon">
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <!-- modal js 연결 -->
+  <script src="./js/modal.js" defer></script>
+  <script src="./js/common.js" defer></script>
+  <script src="./js/project.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 채널톡 -->
+  <script>
+    (function () {
+      var w = window;
+      if (w.ChannelIO) {
+        return w.console.error("ChannelIO script included twice.");
+      }
+      var ch = function () {
+        ch.c(arguments);
+      };
+      ch.q = [];
+      ch.c = function (args) {
+        ch.q.push(args);
+      };
+      w.ChannelIO = ch;
+
+      function l() {
+        if (w.ChannelIOInitialized) {
+          return;
+        }
+        w.ChannelIOInitialized = true;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
+        var x = document.getElementsByTagName("script")[0];
+        if (x.parentNode) {
+          x.parentNode.insertBefore(s, x);
+        }
+      }
+      if (document.readyState === "complete") {
+        l();
+      } else {
+        w.addEventListener("DOMContentLoaded", l);
+        w.addEventListener("load", l);
+      }
+    })();
+
+    ChannelIO('boot', {
+      "pluginKey": "01ae968f-253d-4e6a-977a-94fdae47d3cb"
+    });
+  </script>
+  <div class="search_modal_ex">
+    <div class="search_modal">
+      <div class="search_input">
+        <input type="search" id="search" style="font-size: 17px;" onkeyup="filter()" placeholder="포트폴리오"
+          autocomplete="off" autofocus />
+        <i class="far fa-times" id="searchCloseBtn"></i>
+      </div>
+      <div class="search_result">
+        <div class="search_result_title"><a href="./resume.html#introduce" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">소개(Introduce)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술(Skill)</span>
+            <span class="list_detail">숙련도(Acheivement)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">연락처(Contact)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">주소(Address)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">전화번호(Phone)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">이메일(Email)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./index.html#contact" target="_blank">
+            <span class="list_title">장현정</span>
+            <span class="list_detail">깃헙(GitHub)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">언어(Language)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">라이브러리(Libraries)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">마크업(Markup)
+            </span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#skills" target="_blank">
+            <span class="list_title">기술 스택(Tech Stack)</span>
+            <span class="list_detail">도구(Tools)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">프로젝트(Project)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project01_ilkwang.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">일광전구</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./project02_maison.html" target="_blank">
+            <span class="list_title">코드보기(Code)</span>
+            <span class="list_detail">메종키츠네</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">기획서(Report)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">아이디어 스케치(Idea Sketch)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./portfolio.html#project" target="_blank">
+            <span class="list_title">결과물(Result)</span>
+            <span class="list_detail">프로토타입(ProtoType)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">대학교(University)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">고등학교(High School)</span>
+          </a>
+        </div>
+        <div class="search_result_title"><a href="./resume.html#education" target="_blank">
+            <span class="list_title">교육(Education)</span>
+            <span class="list_detail">개발 관련 교육(Development Education)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- search_modal -->
+  </div>
+  <!--search_modal_ex-->
+
+  <header class="header">
+    <div class="logo"><a href="./index.html"> <img src="./images/logo_color.png" alt="logo"></a>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li><a href="./index.html" id="home_btn">Home</a></li>
+        <li><a href="./resume.html" id="resume_btn">Resume</a></li>
+        <li><a href="./portfolio.html" id="portfolio_btn"><img src="./images/favicon_color.png" alt="favicon_color"
+              style="width: 33px; height: 33px;">Portfolio</a></li>
+        <li><a href="https://github.com/hyeonjeong0302" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="search"><a href="#!"> <i class="far fa-search"></i></a></div>
+      <div class="theme_btn"><a href="#!">
+          <img class="day" src="./images/day_mode.png" alt="">
+          <img class="night" src="./images/night_mode.png" alt="">
+        </a></div>
+    </div>
+    </div>
+  </header>
+  <!-- header -->
+
+  <div class="project_code_ex" id="codeReview">
+    <h1>로그인 - Login System</h1>
+    <div class="project_desc_short">
+      <img src="./images/favicon_color.png" alt="">
+      <p>로그인 시스템을 개발하여 다른 프로젝트에 적용 가능하도록 기획되었습니다.</p>
+    </div>
+    <!--project_desc_short-->
+    <h1>코드보기</h1>
+    <div class="code_btns login">
+      <div class="active"><a href="#code1" class="code_btn">로그인</a></div>
+      <div><a href="#code2" class="code_btn">약관동의</a></div>
+      <div><a href="#code3" class="code_btn">회원가입</a></div>
+    </div>
+    <div class="code_ex">
+      <div class="code code_active" id="code1">
+        <div class="play_code">
+          <img src="./images/login.gif" alt="play_login">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              const loginId = document.getElementById("login_email");
+              const loginPw = document.getElementById("login_pw");
+              const loginBtn = document.getElementById("login_btn");
+              
+              loginId.addEventListener("keyup", color);
+              loginPw.addEventListener("keyup", color);
+              loginBtn.addEventListener("click", validationChk);
+              
+              function validationChk() {
+                let id = document.getElementById("login_email");
+                let pw = document.getElementById("login_pw");
+              
+                let idChk = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+              
+                if (id.value == "") {
+                  alert("이메일을 입력하세요.");
+                  id.focus();
+                  return false;
+                }
+              
+                if (pw.value == "") {
+                  alert("비밀번호를 입력하세요.");
+                  pw.focus();
+                  return false;
+                }
+              
+                if (idChk.test(id.value) == false) {
+                  alert("이메일형식이 올바르지 않습니다.");
+                  id.focus();
+                  return false;
+                } else {
+                  let setId = ["green@gmail.com", "green@naver.com", "green@hanmail.net"];
+                  let setPw = "green1234"
+              
+              
+                  for (let i = 0; i < setId.length; i++) {
+                    if (id.value == setId[i]) {
+                      if (pw.value == setPw) {
+                        moveToMain();
+                      } else {
+                        pw.value = "";
+                        alert("이메일과 비밀번호를 확인하세요.");
+                      }
+                    }
+                  }
+                }
+              }
+              
+              function color() {
+                if (
+                  loginId.value.length > 0 &&
+                  loginId.value.indexOf("@") !== -1 &&
+                  loginPw.value.length >= 5
+                ) {
+                  loginBtn.style.backgroundColor = "#FD8234";
+                  loginBtn.disabled = false;
+                } else {
+                  loginBtn.style.backgroundColor = "#9a9a9a";
+                  loginBtn.disabled = true;
+                }
+              }
+              
+              function moveToMain() {
+                location.replace("./logout.html");
+              }
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div><div style="line-height:130%">45</div><div style="line-height:130%">46</div><div style="line-height:130%">47</div><div style="line-height:130%">48</div><div style="line-height:130%">49</div><div style="line-height:130%">50</div><div style="line-height:130%">51</div><div style="line-height:130%">52</div><div style="line-height:130%">53</div><div style="line-height:130%">54</div><div style="line-height:130%">55</div><div style="line-height:130%">56</div><div style="line-height:130%">57</div><div style="line-height:130%">58</div><div style="line-height:130%">59</div><div style="line-height:130%">60</div><div style="line-height:130%">61</div><div style="line-height:130%">62</div><div style="line-height:130%">63</div><div style="line-height:130%">64</div><div style="line-height:130%">65</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">const</span>&nbsp;loginId&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"login_email"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">const</span>&nbsp;loginPw&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"login_pw"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">const</span>&nbsp;loginBtn&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"login_btn"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">loginId.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"keyup"</span>,&nbsp;color);</div><div style="padding:0 6px; white-space:pre; line-height:130%">loginPw.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"keyup"</span>,&nbsp;color);</div><div style="padding:0 6px; white-space:pre; line-height:130%">loginBtn.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;validationChk);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">function</span>&nbsp;validationChk()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;id&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"login_email"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;pw&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"login_pw"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;idChk&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>^[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>9_\.\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>@[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">9</span>\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>\.[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">9</span>\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(id.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일을&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;id.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(pw.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;pw.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(idChk.test(id.value)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일형식이&nbsp;올바르지&nbsp;않습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;id.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;setId&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;[<span style="color:#63a35c">"green@gmail.com"</span>,&nbsp;<span style="color:#63a35c">"green@naver.com"</span>,&nbsp;<span style="color:#63a35c">"green@hanmail.net"</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;setPw&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"green1234"</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">let</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">0</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;setId.<span style="color:#066de2">length</span>;&nbsp;i<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(id.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;setId[i])&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(pw.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;setPw)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveToMain();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pw.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일과&nbsp;비밀번호를&nbsp;확인하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">function</span>&nbsp;color()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginId.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;<span style="color:#0099cc">0</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginId.value.<span style="color:#066de2">indexOf</span>(<span style="color:#63a35c">"@"</span>)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">1</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginPw.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">5</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginBtn.style.backgroundColor&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"#FD8234"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginBtn.disabled&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginBtn.style.backgroundColor&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"#9a9a9a"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;loginBtn.disabled&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">function</span>&nbsp;moveToMain()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#066de2">location</span>.replace(<span style="color:#63a35c">"./logout.html"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code2">
+        <div class="play_code">
+          <img src="./images/terms.gif" alt="play_signup">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              document.addEventListener("DOMContentLoaded", () => {
+                const totalTerms = document.getElementById("total_terms");
+                const termsEls = document.querySelectorAll(".terms_el");
+                const terms01 = document.getElementById("terms_01");
+                const terms02 = document.getElementById("terms_02");
+                const agreeBtn = document.getElementById("agreeBtn");
+              
+                totalTerms.addEventListener("click", totalCheck);
+                terms01.addEventListener("click", termsCheck);
+                terms02.addEventListener("click", termsCheck);
+                agreeBtn.addEventListener("click", fregister_submit);
+              
+                function totalCheck() {
+                  if (totalTerms.checked === true) {
+                    termsEls.forEach(termsEl => {
+                      termsEl.checked = true;
+                    });
+                  } else {
+                    termsEls.forEach(termsEl => {
+                      termsEl.checked = false;
+                    });
+                  }
+                }
+              
+                function termsCheck() {
+                  if (terms01.checked && terms02.checked) {
+                    totalTerms.checked = true;
+                  } else {
+                    totalTerms.checked = false;
+                  }
+                }
+              
+                function fregister_submit(f) {
+                  if (terms_01.checked === false) {
+                    alert("이용약관에 동의해야 회원가입 하실 수 있습니다.");
+                    event.preventDefault();
+                  }
+              
+                  if (terms_02.checked === false) {
+                    alert("개인정보 수집 및 이용에 동의해야 회원가입 하실 수 있습니다.");
+                    event.preventDefault();
+                  }
+                }
+              });
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#066de2">document</span>.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"DOMContentLoaded"</span>,&nbsp;()&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;totalTerms&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"total_terms"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;termsEls&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelectorAll(<span style="color:#63a35c">".terms_el"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;terms01&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"terms_01"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;terms02&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"terms_02"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;agreeBtn&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"agreeBtn"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;totalTerms.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;totalCheck);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;terms01.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;termsCheck);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;terms02.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;termsCheck);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;agreeBtn.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;fregister_submit);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;totalCheck()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(totalTerms.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;termsEls.forEach(termsEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;termsEl.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;termsEls.forEach(termsEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;termsEl.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;termsCheck()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(terms01.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span>&nbsp;terms02.checked)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTerms.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalTerms.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;fregister_submit(f)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(terms_01.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이용약관에&nbsp;동의해야&nbsp;회원가입&nbsp;하실&nbsp;수&nbsp;있습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">event</span>.preventDefault();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(terms_02.checked&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"개인정보&nbsp;수집&nbsp;및&nbsp;이용에&nbsp;동의해야&nbsp;회원가입&nbsp;하실&nbsp;수&nbsp;있습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">event</span>.preventDefault();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">});</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+      <div class="code" id="code3">
+        <div class="play_code">
+          <img src="./images/signup.gif" alt="play_signup">
+        </div>
+        <div class="exhibit_code">
+          <div class="copy_ex">
+            <textarea class="content" rows="5" cols="30" style="display: none;">
+              document.addEventListener("DOMContentLoaded", () => {
+                const userEmail = document.getElementById("user_email");
+                const domain = document.getElementById("domain-txt");
+                const userPw1 = document.getElementById("user_pw1");
+                const userPw2 = document.getElementById("user_pw2");
+                const userName = document.getElementById("user_name");
+                const telSecond = document.getElementById("tel_second");
+                const telThird = document.getElementById("tel_third");
+              
+                const pwBtn = document.getElementById("pw_btn");
+                const joinBtn = document.getElementById("join_btn");
+                userPw1.addEventListener("change", checkPw);
+                pwBtn.addEventListener("click", comparePw);
+                telSecond.addEventListener("keyup", moveTel);
+                joinBtn.addEventListener("click", validationChk);
+              
+                const domainListEl = document.querySelector("#domain-list");
+                const domainInputEl = document.querySelector("#domain-txt");
+              
+                domainListEl.addEventListener("change", event => {
+                  if (event.target.value !== "type") {
+                    domainInputEl.value = event.target.value;
+                    domainInputEl.disabled = true;
+                  } else {
+                    domainInputEl.value = "";
+                    domainInputEl.disabled = false;
+                  }
+                });
+              
+                function validationChk() {
+                  let idChk = /^[A-Za-z0-9_\.\-]/;
+                  let domainChk = /^[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+              
+                  if (userEmail.value == "") {
+                    alert("이메일을 입력하세요.");
+                    userEmail.focus();
+                    return false;
+                  }
+              
+                  if (domain.value == "") {
+                    alert("이메일을 입력하세요.");
+                    domain.focus();
+                    return false;
+                  }
+              
+                  if (userPw1.value == "") {
+                    alert("비밀번호를 입력하세요.");
+                    userPw1.focus();
+                    return false;
+                  }
+              
+                  if (userPw2.value == "") {
+                    alert("비밀번호를 입력하세요.");
+                    userPw2.focus();
+                    return false;
+                  }
+              
+                  if (userName.value == "") {
+                    alert("이름을 입력하세요.");
+                    userName.focus();
+                    return false;
+                  }
+              
+                  if (telSecond.value == "") {
+                    alert("전화번호를 입력하세요.");
+                    telSecond.focus();
+                    return false;
+                  }
+              
+                  if (telThird.value == "") {
+                    alert("전화번호를 입력하세요.");
+                    telThird.focus();
+                    return false;
+                  }
+              
+                  if (idChk.test(userEmail.value) == false) {
+                    alert("이메일형식이 올바르지 않습니다.");
+                    userEmail.focus();
+                    return false;
+                  }
+              
+                  if (domainChk.test(domain.value) == false) {
+                    alert("이메일형식이 올바르지 않습니다.");
+                    userEmail.focus();
+                    return false;
+                  }
+              
+                  if (userPw1.value.length < 4) {
+                    alert("사용할 수 없는 비밀번호입니다. 4자 이상 입력해 주세요.");
+                    userPw1.focus();
+                    return false;
+                  }
+                  moveToConfirm();
+                }
+              
+                function checkPw() {
+                  if (userPw1.value.length < 4) {
+                    alert("사용할 수 없는 비밀번호입니다. 4자 이상 입력해 주세요.");
+                    userPw1.select();
+                  }
+                }
+              
+                function comparePw() {
+                  if (userPw1.value == "") {
+                    alert("비밀번호를 입력하세요.");
+                    userPw1.value = "";
+                    userPw1.focus();
+                    return false;
+                  }
+              
+                  if (userPw2.value == "") {
+                    alert("비밀번호를 입력하세요.");
+                    userPw2.value = "";
+                    userPw2.focus();
+                    return false;
+                  }
+              
+                  if (userPw1.value.length < 4) {
+                    alert("사용할 수 없는 비밀번호입니다. 4자 이상 입력해 주세요.");
+                    userPw1.value = "";
+                    userPw1.focus();
+                    return false;
+                  }
+              
+                  if (userPw1.value !== userPw2.value) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    userPw1.value = "";
+                    userPw2.value = "";
+                  } else {
+                    alert("사용 가능한 비밀번호입니다.");
+                  }
+                } 
+              
+                const birthYearEl = document.querySelector("#birth-year");
+                isYearOptionExisted = false;
+                birthYearEl.addEventListener("focus", function () {
+                  if (!isYearOptionExisted) {
+                    isYearOptionExisted = true;
+                    for (var i = 1940; i <= 2022; i++) {
+                      const YearOption = document.createElement("option");
+                      YearOption.setAttribute("value", i);
+                      YearOption.innerText = i;
+                      this.appendChild(YearOption);
+                    }
+                  }
+                });
+                const birthMonthEl = document.querySelector("#birth-month");
+                isMonthOptionExisted = false;
+                birthMonthEl.addEventListener("focus", function () {
+                  if (!isMonthOptionExisted) {
+                    isMonthOptionExisted = true;
+                    for (var i = 1; i <= 12; i++) {
+                      const MonthOption = document.createElement("option");
+                      MonthOption.setAttribute("value", i);
+                      MonthOption.innerText = i;
+                      this.appendChild(MonthOption);
+                    }
+                  }
+                });
+                const birthDayEl = document.querySelector("#birth-day");
+                isDayOptionExisted = false;
+                birthDayEl.addEventListener("focus", function () {
+                  if (!isDayOptionExisted) {
+                    isDayOptionExisted = true;
+                    for (var i = 1; i <= 31; i++) {
+                      const DayOption = document.createElement("option");
+                      DayOption.setAttribute("value", i);
+                      DayOption.innerText = i;
+                      this.appendChild(DayOption);
+                    }
+                  }
+                });
+              
+                YearOption.setAttribute("value", i);
+              
+                const selectedYearEl = document.querySelector("#print-date");
+                birthYearEl.addEventListener("change", event => {
+                  selectedYearEl.textContent = `Year of birth : ${event.target.value}`;
+                });
+                const selectedMonthEl = document.querySelector("#print-date");
+                birthMonthEl.addEventListener("change", event => {
+                  selectedMonthEl.textContent = `Month of birth : ${event.target.value}`;
+                });
+                const selectedDayEl = document.querySelector("#print-date");
+                birthDayEl.addEventListener("change", event => {
+                  selectedDayEl.textContent = `Day of birth : ${event.target.value}`;
+                });
+              
+                function moveTel() {
+                  if (telSecond.value.length >= 4) {
+                    telThird.focus();
+                  }
+                }
+              });
+              
+              function sample4_execDaumPostcode() {
+                new daum.Postcode({
+                  oncomplete: function (data) {
+                    var roadAddr = data.roadAddress;
+                    var extraRoadAddr = "";
+              
+                    if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+                      extraRoadAddr += data.bname;
+                    }
+                    if (data.buildingName !== "" && data.apartment === "Y") {
+                      extraRoadAddr +=
+                        extraRoadAddr !== "" ? ", " + data.buildingName : data.buildingName;
+                    }
+                    if (extraRoadAddr !== "") {
+                      extraRoadAddr = " (" + extraRoadAddr + ")";
+                    }
+              
+                    document.getElementById("sample4_postcode").value = data.zonecode;
+                    document.getElementById("sample4_roadAddress").value = roadAddr;
+                    document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+              
+                    if (roadAddr !== "") {
+                      document.getElementById("sample4_extraAddress").value = extraRoadAddr;
+                    } else {
+                      document.getElementById("sample4_extraAddress").value = "";
+                    }
+              
+                    var guideTextBox = document.getElementById("guide");
+                    if (data.autoRoadAddress) {
+                      var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
+                      guideTextBox.innerHTML = "(예상 도로명 주소 : " + expRoadAddr + ")";
+                      guideTextBox.style.display = "block";
+                    } else if (data.autoJibunAddress) {
+                      var expJibunAddr = data.autoJibunAddress;
+                      guideTextBox.innerHTML = "(예상 지번 주소 : " + expJibunAddr + ")";
+                      guideTextBox.style.display = "block";
+                    } else {
+                      guideTextBox.innerHTML = "";
+                      guideTextBox.style.display = "none";
+                    }
+                  },
+                }).open();
+              }
+              
+              function moveToConfirm() {
+                location.replace("./join_check.html");
+              }
+            </textarea>
+            <div class="copy_btn">
+              <div class="copy" title="Copy Textarea Content">Copy</div>
+              <div class="copied">
+                Copied
+              </div>
+            </div>
+          </div>
+          <!--copy_ex-->
+<div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; width:575px; height:380px; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div><div style="line-height:130%">45</div><div style="line-height:130%">46</div><div style="line-height:130%">47</div><div style="line-height:130%">48</div><div style="line-height:130%">49</div><div style="line-height:130%">50</div><div style="line-height:130%">51</div><div style="line-height:130%">52</div><div style="line-height:130%">53</div><div style="line-height:130%">54</div><div style="line-height:130%">55</div><div style="line-height:130%">56</div><div style="line-height:130%">57</div><div style="line-height:130%">58</div><div style="line-height:130%">59</div><div style="line-height:130%">60</div><div style="line-height:130%">61</div><div style="line-height:130%">62</div><div style="line-height:130%">63</div><div style="line-height:130%">64</div><div style="line-height:130%">65</div><div style="line-height:130%">66</div><div style="line-height:130%">67</div><div style="line-height:130%">68</div><div style="line-height:130%">69</div><div style="line-height:130%">70</div><div style="line-height:130%">71</div><div style="line-height:130%">72</div><div style="line-height:130%">73</div><div style="line-height:130%">74</div><div style="line-height:130%">75</div><div style="line-height:130%">76</div><div style="line-height:130%">77</div><div style="line-height:130%">78</div><div style="line-height:130%">79</div><div style="line-height:130%">80</div><div style="line-height:130%">81</div><div style="line-height:130%">82</div><div style="line-height:130%">83</div><div style="line-height:130%">84</div><div style="line-height:130%">85</div><div style="line-height:130%">86</div><div style="line-height:130%">87</div><div style="line-height:130%">88</div><div style="line-height:130%">89</div><div style="line-height:130%">90</div><div style="line-height:130%">91</div><div style="line-height:130%">92</div><div style="line-height:130%">93</div><div style="line-height:130%">94</div><div style="line-height:130%">95</div><div style="line-height:130%">96</div><div style="line-height:130%">97</div><div style="line-height:130%">98</div><div style="line-height:130%">99</div><div style="line-height:130%">100</div><div style="line-height:130%">101</div><div style="line-height:130%">102</div><div style="line-height:130%">103</div><div style="line-height:130%">104</div><div style="line-height:130%">105</div><div style="line-height:130%">106</div><div style="line-height:130%">107</div><div style="line-height:130%">108</div><div style="line-height:130%">109</div><div style="line-height:130%">110</div><div style="line-height:130%">111</div><div style="line-height:130%">112</div><div style="line-height:130%">113</div><div style="line-height:130%">114</div><div style="line-height:130%">115</div><div style="line-height:130%">116</div><div style="line-height:130%">117</div><div style="line-height:130%">118</div><div style="line-height:130%">119</div><div style="line-height:130%">120</div><div style="line-height:130%">121</div><div style="line-height:130%">122</div><div style="line-height:130%">123</div><div style="line-height:130%">124</div><div style="line-height:130%">125</div><div style="line-height:130%">126</div><div style="line-height:130%">127</div><div style="line-height:130%">128</div><div style="line-height:130%">129</div><div style="line-height:130%">130</div><div style="line-height:130%">131</div><div style="line-height:130%">132</div><div style="line-height:130%">133</div><div style="line-height:130%">134</div><div style="line-height:130%">135</div><div style="line-height:130%">136</div><div style="line-height:130%">137</div><div style="line-height:130%">138</div><div style="line-height:130%">139</div><div style="line-height:130%">140</div><div style="line-height:130%">141</div><div style="line-height:130%">142</div><div style="line-height:130%">143</div><div style="line-height:130%">144</div><div style="line-height:130%">145</div><div style="line-height:130%">146</div><div style="line-height:130%">147</div><div style="line-height:130%">148</div><div style="line-height:130%">149</div><div style="line-height:130%">150</div><div style="line-height:130%">151</div><div style="line-height:130%">152</div><div style="line-height:130%">153</div><div style="line-height:130%">154</div><div style="line-height:130%">155</div><div style="line-height:130%">156</div><div style="line-height:130%">157</div><div style="line-height:130%">158</div><div style="line-height:130%">159</div><div style="line-height:130%">160</div><div style="line-height:130%">161</div><div style="line-height:130%">162</div><div style="line-height:130%">163</div><div style="line-height:130%">164</div><div style="line-height:130%">165</div><div style="line-height:130%">166</div><div style="line-height:130%">167</div><div style="line-height:130%">168</div><div style="line-height:130%">169</div><div style="line-height:130%">170</div><div style="line-height:130%">171</div><div style="line-height:130%">172</div><div style="line-height:130%">173</div><div style="line-height:130%">174</div><div style="line-height:130%">175</div><div style="line-height:130%">176</div><div style="line-height:130%">177</div><div style="line-height:130%">178</div><div style="line-height:130%">179</div><div style="line-height:130%">180</div><div style="line-height:130%">181</div><div style="line-height:130%">182</div><div style="line-height:130%">183</div><div style="line-height:130%">184</div><div style="line-height:130%">185</div><div style="line-height:130%">186</div><div style="line-height:130%">187</div><div style="line-height:130%">188</div><div style="line-height:130%">189</div><div style="line-height:130%">190</div><div style="line-height:130%">191</div><div style="line-height:130%">192</div><div style="line-height:130%">193</div><div style="line-height:130%">194</div><div style="line-height:130%">195</div><div style="line-height:130%">196</div><div style="line-height:130%">197</div><div style="line-height:130%">198</div><div style="line-height:130%">199</div><div style="line-height:130%">200</div><div style="line-height:130%">201</div><div style="line-height:130%">202</div><div style="line-height:130%">203</div><div style="line-height:130%">204</div><div style="line-height:130%">205</div><div style="line-height:130%">206</div><div style="line-height:130%">207</div><div style="line-height:130%">208</div><div style="line-height:130%">209</div><div style="line-height:130%">210</div><div style="line-height:130%">211</div><div style="line-height:130%">212</div><div style="line-height:130%">213</div><div style="line-height:130%">214</div><div style="line-height:130%">215</div><div style="line-height:130%">216</div><div style="line-height:130%">217</div><div style="line-height:130%">218</div><div style="line-height:130%">219</div><div style="line-height:130%">220</div><div style="line-height:130%">221</div><div style="line-height:130%">222</div><div style="line-height:130%">223</div><div style="line-height:130%">224</div><div style="line-height:130%">225</div><div style="line-height:130%">226</div><div style="line-height:130%">227</div><div style="line-height:130%">228</div><div style="line-height:130%">229</div><div style="line-height:130%">230</div><div style="line-height:130%">231</div><div style="line-height:130%">232</div><div style="line-height:130%">233</div><div style="line-height:130%">234</div><div style="line-height:130%">235</div><div style="line-height:130%">236</div><div style="line-height:130%">237</div><div style="line-height:130%">238</div><div style="line-height:130%">239</div><div style="line-height:130%">240</div><div style="line-height:130%">241</div><div style="line-height:130%">242</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#066de2">document</span>.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"DOMContentLoaded"</span>,&nbsp;()&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;userEmail&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"user_email"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;domain&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"domain-txt"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;userPw1&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"user_pw1"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;userPw2&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"user_pw2"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;userName&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"user_name"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;telSecond&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"tel_second"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;telThird&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"tel_third"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;pwBtn&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"pw_btn"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;joinBtn&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"join_btn"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;userPw1.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"change"</span>,&nbsp;checkPw);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;pwBtn.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;comparePw);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;telSecond.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"keyup"</span>,&nbsp;moveTel);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;joinBtn.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"click"</span>,&nbsp;validationChk);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;domainListEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#domain-list"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;domainInputEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#domain-txt"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;domainListEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"change"</span>,&nbsp;<span style="color:#066de2">event</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span style="color:#066de2">event</span>.target.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"type"</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domainInputEl.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">event</span>.target.value;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domainInputEl.disabled&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domainInputEl.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domainInputEl.disabled&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;validationChk()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;idChk&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>^[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>9_\.\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">let</span>&nbsp;domainChk&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>^[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">9</span>\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>\.[A<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>Za<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>z0<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span><span style="color:#0099cc">9</span>\<span style="color:#ff3399"></span><span style="color:#a71d5d">-</span>]<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userEmail.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일을&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userEmail.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(domain.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일을&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;domain.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw2.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw2.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userName.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이름을&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userName.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(telSecond.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"전화번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telSecond.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(telThird.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"전화번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telThird.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(idChk.test(userEmail.value)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일형식이&nbsp;올바르지&nbsp;않습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userEmail.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(domainChk.test(domain.value)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"이메일형식이&nbsp;올바르지&nbsp;않습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userEmail.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;<span style="color:#0099cc">4</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"사용할&nbsp;수&nbsp;없는&nbsp;비밀번호입니다.&nbsp;4자&nbsp;이상&nbsp;입력해&nbsp;주세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;moveToConfirm();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;checkPw()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;<span style="color:#0099cc">4</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"사용할&nbsp;수&nbsp;없는&nbsp;비밀번호입니다.&nbsp;4자&nbsp;이상&nbsp;입력해&nbsp;주세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.select();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;comparePw()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw2.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호를&nbsp;입력하세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw2.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw2.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span>&nbsp;<span style="color:#0099cc">4</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"사용할&nbsp;수&nbsp;없는&nbsp;비밀번호입니다.&nbsp;4자&nbsp;이상&nbsp;입력해&nbsp;주세요."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">return</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;userPw2.value)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"비밀번호가&nbsp;일치하지&nbsp;않습니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw1.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userPw2.value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">alert</span>(<span style="color:#63a35c">"사용&nbsp;가능한&nbsp;비밀번호입니다."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;birthYearEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#birth-year"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;isYearOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthYearEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"focus"</span>,&nbsp;<span style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span>isYearOptionExisted)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isYearOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">var</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1940</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">2022</span>;&nbsp;i<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;YearOption&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"option"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YearOption.setAttribute(<span style="color:#63a35c">"value"</span>,&nbsp;i);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YearOption.innerText&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;i;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.appendChild(YearOption);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;birthMonthEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#birth-month"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;isMonthOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthMonthEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"focus"</span>,&nbsp;<span style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span>isMonthOptionExisted)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isMonthOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">var</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">12</span>;&nbsp;i<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;MonthOption&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"option"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MonthOption.setAttribute(<span style="color:#63a35c">"value"</span>,&nbsp;i);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MonthOption.innerText&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;i;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.appendChild(MonthOption);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;birthDayEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#birth-day"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;isDayOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthDayEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"focus"</span>,&nbsp;<span style="color:#a71d5d">function</span>&nbsp;()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span>isDayOptionExisted)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isDayOptionExisted&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#a71d5d">true</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">for</span>&nbsp;(<span style="color:#a71d5d">var</span>&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">1</span>;&nbsp;i&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&lt;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">31</span>;&nbsp;i<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;DayOption&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.createElement(<span style="color:#63a35c">"option"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DayOption.setAttribute(<span style="color:#63a35c">"value"</span>,&nbsp;i);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DayOption.innerText&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;i;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">this</span>.appendChild(DayOption);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;YearOption.setAttribute(<span style="color:#63a35c">"value"</span>,&nbsp;i);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;selectedYearEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#print-date"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthYearEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"change"</span>,&nbsp;<span style="color:#066de2">event</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;selectedYearEl.textContent&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;`Year&nbsp;of&nbsp;birth&nbsp;:&nbsp;${<span style="color:#066de2">event</span>.target.value}`;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;selectedMonthEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#print-date"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthMonthEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"change"</span>,&nbsp;<span style="color:#066de2">event</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;selectedMonthEl.textContent&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;`Month&nbsp;of&nbsp;birth&nbsp;:&nbsp;${<span style="color:#066de2">event</span>.target.value}`;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">const</span>&nbsp;selectedDayEl&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.querySelector(<span style="color:#63a35c">"#print-date"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;birthDayEl.<span style="color:#066de2">addEventListener</span>(<span style="color:#63a35c">"change"</span>,&nbsp;<span style="color:#066de2">event</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;selectedDayEl.textContent&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;`Day&nbsp;of&nbsp;birth&nbsp;:&nbsp;${<span style="color:#066de2">event</span>.target.value}`;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">function</span>&nbsp;moveTel()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(telSecond.value.<span style="color:#066de2">length</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#0099cc">4</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telThird.focus();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">});</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">function</span>&nbsp;sample4_execDaumPostcode()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#a71d5d">new</span>&nbsp;daum.Postcode({</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;oncomplete:&nbsp;<span style="color:#a71d5d">function</span>&nbsp;(data)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">var</span>&nbsp;roadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.roadAddress;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">var</span>&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(data.bname&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>[동<span style="color:#ff3399"></span><span style="color:#a71d5d">|</span>로<span style="color:#ff3399"></span><span style="color:#a71d5d">|</span>가]$<span style="color:#ff3399"></span><span style="color:#a71d5d">/</span>g.test(data.bname))&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.bname;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(data.buildingName&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&amp;</span>&nbsp;data.apartment&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"Y"</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>&nbsp;?&nbsp;<span style="color:#63a35c">",&nbsp;"</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;data.buildingName&nbsp;:&nbsp;data.buildingName;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"&nbsp;("</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;extraRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">")"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"sample4_postcode"</span>).value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.zonecode;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"sample4_roadAddress"</span>).value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;roadAddr;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"sample4_jibunAddress"</span>).value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.jibunAddress;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(roadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">!</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"sample4_extraAddress"</span>).value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;extraRoadAddr;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"sample4_extraAddress"</span>).value&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">var</span>&nbsp;guideTextBox&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"guide"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(data.autoRoadAddress)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">var</span>&nbsp;expRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.autoRoadAddress&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;extraRoadAddr;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.innerHTML&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"(예상&nbsp;도로명&nbsp;주소&nbsp;:&nbsp;"</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;expRoadAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">")"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.style.display&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"block"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;<span style="color:#a71d5d">if</span>&nbsp;(data.autoJibunAddress)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a71d5d">var</span>&nbsp;expJibunAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data.autoJibunAddress;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.innerHTML&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"(예상&nbsp;지번&nbsp;주소&nbsp;:&nbsp;"</span>&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;expJibunAddr&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">+</span>&nbsp;<span style="color:#63a35c">")"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.style.display&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"block"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span style="color:#a71d5d">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.innerHTML&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">""</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;guideTextBox.style.display&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;<span style="color:#63a35c">"none"</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;},</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}).open();</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#a71d5d">function</span>&nbsp;moveToConfirm()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#066de2">location</span>.replace(<span style="color:#63a35c">"./join_check.html"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </div>
+        <!--exhibit_code-->
+      </div>
+    </div>
+  </div>
+  <!--project_code_ex-->
+
+  <div class="wrap">
+    <div class="project_screen_shot">
+      <h1>프로젝트 주요 화면</h1>
+      <img src="./images/ik_signin01.png" alt="">
+      <img src="./images/ik_signin02.png" alt="">
+      <img src="./images/ik_signup01.png" alt="">
+      <img src="./images/ik_signup02.png" alt="">
+      <img src="./images/ik_signup04.png" alt="">
+      <img src="./images/ik_signup05.png" alt="">
+    </div>
+    <!--project_screen_shot-->
+
+    <div class="planning_background">
+      <h1>프로젝트 기획 배경</h1>
+      <p>베이비 개발자로서 앞으로 많은 수의 프로젝트를 기획할 예정인데 매 프로젝트마다 로그인 기능을 새로 개발하는 것이 비효율적이라 판단하여 로그인 페이지의 틀을 고정하는 편이 <br />좋다고
+        판단하였다.
+      </p>
+    </div>
+    <!--planning_background-->
+
+    <div class="project_detail">
+      <h1>프로젝트 상세 소개</h1>
+      <div><img src="./images/favicon_color.png" alt="">
+        <h3>기획 콘셉트 및 기대 효과</h3>
+      </div>
+      <ul class="concept_benefit">
+        <li>매 프로젝트 별 로그인 페이지 기획의 번거로움 개선</li>
+      </ul>
+      <!--concept_benefit-->
+      <div><img src="./images/favicon_color.png" alt="">
+        <h3>핵심 기능</h3>
+      </div>
+      <ul class="core_function">
+        <li>등록 된 아이디/비밀번호로 로그인</li>
+        <li>회원가입 약관 비동의 시 회원가입 페이지로 이동 불가</li>
+        <li>필수 항목 미입력 시 회원가입 완료 불가</li>
+      </ul>
+      <!--core_function -->
+    </div>
+    <!--project_detail-->
+
+    <div class="result">
+      <h1>프로젝트 결과물</h1>
+      <ul>
+        <li><a href="./login_draft.html" target="_blank">시안</a></li>
+        <li><a href="./login_flowchart.html" target="_blank">플로우차트</a></li>
+        <li><a href="https://hyeonjeong0302.github.io/Hyeonjeong_JANG_Login/" target="_blank">로그인 사이트</a></li>
+      </ul>
+    </div>
+    <!--result-->
+
+    <div class="dev_span">
+      <h1>개발 기간 & 일정</h1>
+      <ul>
+        <li class="span">2023/04/15 - 2023/04/17</li>
+        <li>1주차: 아이템 선정, 세부 기획, 시안/플로우차트 제작,UI/UX 설계, UI/UX 수정,코딩</li>
+      </ul>
+    </div>
+    <!--dev_span-->
+
+    <div class="quick">
+      <div class="top_btn"><a href="#">TOP</a></div>
+    </div>
+    <!--quick-->
+  </div>
+  <!--wrap-->
+</body>
+
+</html>
